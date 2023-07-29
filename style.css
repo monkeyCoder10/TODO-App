@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(41, 118, 166);
+    background: linear-gradient(45deg, rgba(41, 118, 166, 1)0%, rgba(176, 30, 175, 1)100%);
+}
+.container{
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 50px auto 70px;
+    border-radius: 10px;
+    padding: 30px;
+}
+h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: rgb(119, 0, 255);
+}
+h2 img{
+    height: 30px;
+    margin-left: 5px;
+}
+input[type=text]{
+    background-color: #eae7e7;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    width: 85%;
+    height: 30px;
+    font-size: .8rem;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+input[type=submit]{
+    background-color: #fff;
+    outline: none;
+    border: none;
+    margin-left: 9px;
+    color: purple;
+    cursor: pointer;
+}
+ul{
+    margin: 20px 20px 10px;
+}
+ul li{
+    position: relative;
+    list-style: none;
+    user-select: none;
+    padding: 7px;
+    cursor: pointer;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: -20px;
+    background-image: url(./uncheck.svg);
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color: rgb(184, 179, 179);
+}
+ul li.checked::before{
+    background-image: url(./check.svg);
+}
+li span{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    right: 0;
+    text-align: center;
+    font-size: 22px;
+}
+li span:hover{
+    background: #d7d7d7;
+}
